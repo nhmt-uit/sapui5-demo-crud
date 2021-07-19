@@ -1,0 +1,77 @@
+<mvc:View
+    controllerName="demo-crud.controller.StudentList"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Table
+        id="studentList"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{
+            path : 'studentModel>/students',
+            sorter : {
+                path : 'studentID',
+                group : false
+            }
+        }">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>studentListTitle}"/>
+                <ToolbarSpacer/>
+                <SearchField width="50%" search=".onFilterStudent"/>
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column
+                hAlign="End"
+                minScreenWidth="Small"
+                demandPopin="true"
+                width="4em">
+                <Text text="{i18n>columnID}"/>
+            </Column>
+            <Column>
+                <Text text="{i18n>columnName}"/>
+            </Column>
+            <Column
+                minScreenWidth="Small"
+                demandPopin="true">
+                <Text text="{i18n>columnAge}"/>
+            </Column>
+            <Column
+                minScreenWidth="Small"
+                demandPopin="true">
+                <Text text="{i18n>columnSex}"/>
+            </Column>
+            <Column
+                minScreenWidth="Small"
+                demandPopin="true">
+                <Text text="{i18n>columnMajor}"/>
+            </Column>
+            <Column
+                hAlign="End">
+                <Text text="{i18n>columnEdit}"/>
+            </Column>
+            <Column
+                hAlign="End">
+                <Text text="{i18n>columnDelete}"/>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem
+                type="Navigation"
+                press=".onPress">
+                <cells>
+                    <ObjectNumber number="{studentModel>studentID}" emphasized="false"/>
+                    <ObjectIdentifier title="{studentModel>firstName} {studentModel>lastName}"/>
+                    <Text text="{studentModel>age}"/>
+                    <Text text="{studentModel>sex}"/>
+                    <Text text="{studentModel>major}"/>
+                    <core:Icon src="sap-icon://user-edit" 
+                        class="IconStyle" press=".editStudent"/>
+                    <core:Icon src="sap-icon://delete" 
+                        class="IconStyle" press=".deleteStudent"/>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>

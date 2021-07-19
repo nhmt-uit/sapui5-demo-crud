@@ -1,0 +1,84 @@
+<core:FragmentDefinition
+    controllerName="demo-crud.controller.ControlStudentPanel"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" >
+    <Dialog
+        id="upsertStudentDialog"
+        contentHeight="100%"
+        contentWidth="60%">
+		<Label text="ID" class="sapUiSmallMargin" labelFor="InputStudentID"/>
+        <Input
+            id="InputStudentID"
+            class="sapUiSmallMarginBottom"
+            type="Text"
+            placeholder="Enter Student's ID"
+            value="{/info/studentID}"
+            valueLiveUpdate="true"
+            enabled="true"
+            editable="true"
+        />
+        <Label text="Firstname" class="sapUiSmallMargin" labelFor="InputFirstname"/>
+        <Input
+            id="InputFirstname"
+            class="sapUiSmallMarginBottom"
+            type="Text"
+            placeholder="Enter Student's Firstname"
+            value="{/info/firstName}"
+            valueLiveUpdate="true"
+            enabled="true"
+            editable="true"
+        />
+        <Label text="Lastname" class="sapUiSmallMargin" labelFor="InputLastname"/>
+        <Input
+            id="InputLastname"
+            class="sapUiSmallMarginBottom"
+            type="Text"
+            placeholder="Enter Student's Lastname"
+            value="{/info/lastName}"
+            valueLiveUpdate="true"
+            enabled="true"
+            editable="true"
+        />
+        <Label text="Student's Age" class="sapUiSmallMargin" labelFor="InputAge"/>
+        <Input
+            id="InputAge"
+            class="sapUiSmallMarginBottom"
+            type="Text"
+            placeholder="Enter Student's Age"
+            value="{/info/age}"
+            valueLiveUpdate="true"
+            enabled="true"
+            editable="true"
+        />
+        <Label text="Sex" class="sapUiSmallMargin" labelFor="InputSex"/>
+        <Input
+            id="InputSex"
+            class="sapUiSmallMarginBottom"
+            type="Text"
+            placeholder="Enter Student's Sex"
+            value="{/info/sex}"
+            valueLiveUpdate="true"
+            enabled="true"
+            editable="true"
+        />
+        <Label text="Major" class="sapUiSmallMargin" labelFor="InputMajor"/>
+        <Input
+            id="InputMajor"
+            class="sapUiSmallMarginBottom"
+            type="Text"
+            placeholder="Enter Student's Major"
+            value="{/info/major}"
+            valueLiveUpdate="true"
+            enabled="true"
+            editable="true"
+        />
+        <Button
+            class="sapUiSmallMargin"
+            text="{i18n>confirmButton}"
+            press=".onCreateStudent"/>
+        <Button
+            class="sapUiSmallMarginEnd"
+            text="{i18n>closeStudentDialogButton}"
+            press=".onCloseStudentDialog"/>
+	</Dialog>
+</core:FragmentDefinition>

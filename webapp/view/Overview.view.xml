@@ -1,0 +1,18 @@
+<mvc:View
+    controllerName="demo-crud.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>homePageTitle}">
+		<headerContent>
+			<Button
+                icon="sap-icon://hello-world"
+                press=".onOpenDialog"/>
+		</headerContent>
+		<content>
+			<!-- <mvc:XMLView viewName="demo-crud.view.HelloPanel"/>
+			<mvc:XMLView viewName="demo-crud.view.InvoiceList"/> -->
+			<mvc:XMLView viewName="demo-crud.view.ControlStudentPanel"/>
+			<mvc:XMLView viewName="demo-crud.view.StudentList"/>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,19 @@
+<mvc:View
+    controllerName="demo-crud.controller.ControlStudentPanel"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Panel
+            class="sapUiResponsiveMargin"
+            width="auto"
+            expandable="{device>/system/phone}"
+		    expanded="{= !${device>/system/phone} }">
+            <content>
+                <Button
+                    id="helloDialogButton"
+                    text="{i18n>createStudentButton}"
+                    icon="sap-icon://add-employee"
+                    press=".handleOpenCreateStudentDialog"
+                    class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
+            </content>
+    </Panel>
+</mvc:View>

@@ -1,0 +1,27 @@
+{
+    "Students": [{
+            "studentID": 1,
+            "firstName": "Tu",
+            "lastName": "Nguyen",
+            "age": 20,
+            "sex": "M",
+            "major": "Information Technology"
+        },
+        {
+            "studentID": 2,
+            "firstName": "Quynh",
+            "lastName": "Tran",
+            "age": 22,
+            "sex": "F",
+            "major": "Marketing"
+        },
+        {
+            "studentID": 3,
+            "firstName": "Thao",
+            "lastName": "Huynh",
+            "age": 21,
+            "sex": "F",
+            "major": "International Relationship"
+        }
+    ]
+}
